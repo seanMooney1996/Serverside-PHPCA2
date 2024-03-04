@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Posts extends Migration
+class CreateCommentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,16 @@ class Posts extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table){
-            $table->increments('id');
-            $table->string('slug');
-            $table->string('title');
-            $table->longText('description');
-            $table->string('image_path');
+
+        // https://laravel.com/docs/4.2/schema#foreign-keys <--- used to learn about foreign keys in laravel
+        Schema::create('comments', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
+            $table->string('content');
+            $table->unsignedInteger('post_id');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('post_id')->references('id')->on('posts');
         });
     }
 
@@ -32,6 +33,6 @@ class Posts extends Migration
      */
     public function down()
     {
-        
+        Schema::dropIfExists('comments');
     }
 }
