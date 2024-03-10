@@ -25,14 +25,23 @@ class CommentsController extends Controller
         return view('comments.create', ['postId' => $postId, 'userId' => $userId]);
     }
 
-    public function store(Request $request, $postId, $userId)
+    public function store(Request $request)
     {
+        // Validate the request data
+        $request->validate([
+            'content' => 'required',
+            'postId' => 'required',
+            'userId' => 'required',
+        ]);
+
+    
         $comment = new Comment();
         $comment->content = $request->input('content');
-        $comment->post_id = $postId;
-        $comment->user_id = $userId;
+        $comment->post_id = $request->input('postId');
+        $comment->user_id = $request->input('userId');
         $comment->save();
 
+        // Redirect the user with a success message
         return redirect('/blog')->with('message', 'Your comment has been added!');
     }
 

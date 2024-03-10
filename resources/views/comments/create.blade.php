@@ -12,7 +12,7 @@
 
     <div class="w-4/5 m-auto pt-20">
         <form
-            action="/comment"
+            action="{{ route('comments.store') }}"
             method="POST"
             enctype="multipart/form-data">
             @csrf
@@ -24,6 +24,8 @@
     class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none"></textarea>
             </label>
 
+            <input type="hidden" name="postId" value="{{ $postId }}">
+            <input type="hidden" name="userId" value="{{ $userId }}">
 
             <button
                 type="submit"
