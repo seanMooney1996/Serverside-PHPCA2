@@ -45,24 +45,26 @@
             {{ $post->description }}
         </p>
         @for ($i = 0; $i < 2; $i++)
-        <p>  <strong>{{ $post->comments[$i]->user->name }}</strong>: {{ $post->comments[$i]->content }}<br/>
+        <p><strong>{{ $post->comments[$i]->user->name }}</strong>: {{ $post->comments[$i]->content }}<br/>
             {{ $post->comments[$i]->created_at }}
         </p>
 
         @endfor
-        <div>
+        <div class="buttonsBottom">
+            <a href="/blog/{{ $post->slug }}"
+               class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
+                Keep Reading
+            </a>
+
             @if (isset(Auth::user()->id) )
             <a
                 href="{{ route('comments.create', ['postId' => $post->id, 'userId' => Auth::id()]) }}"
-                class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2">
+                class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
                 Add a comment
             </a>
             @endif
+
         </div>
-        <a href="/blog/{{ $post->slug }}"
-           class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
-            Keep Reading
-        </a>
         @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
     </div>
     <span class="float-right">
