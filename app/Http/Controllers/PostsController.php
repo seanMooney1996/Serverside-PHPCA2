@@ -21,7 +21,12 @@ class PostsController extends Controller
     public function index()
     {
 
-        $posts = Post::with('comments')->orderBy('updated_at', 'DESC')->get();
+        $posts = Post::with(['comments' => function ($query) {
+            $query->orderBy('created_at', 'DESC');
+        }])
+            ->orderBy('created_at', 'ASC')->get();
+
+
         return view('blog.index', compact('posts'));
     }
 

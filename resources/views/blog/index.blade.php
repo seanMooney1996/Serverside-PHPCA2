@@ -68,13 +68,6 @@
         @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
     </div>
     <span class="float-right">
-                    <a
-                        href="/blog/{{ $post->slug }}/edit"
-                        class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2">
-                        Edit
-                    </a>
-                </span>
-    <span class="float-right">
                      <form
                          action="/blog/{{ $post->slug }}"
                          method="POST">
@@ -88,6 +81,12 @@
                         </button>
 
                     </form>
+
+                     <a
+                         href="/blog/{{ $post->slug }}/edit"
+                         class="text-gray-700 italic hover:text-gray-900 pb-1 border-b-2">
+                        Edit
+                    </a>
                 </span>
     @endif
 </div>
