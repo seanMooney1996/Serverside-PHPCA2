@@ -34,7 +34,7 @@ class CommentsController extends Controller
             'userId' => 'required',
         ]);
 
-    
+
         $comment = new Comment();
         $comment->content = $request->input('content');
         $comment->post_id = $request->input('postId');

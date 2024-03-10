@@ -9,10 +9,9 @@
         </div>
     </div>
 
-
     <div class="w-4/5 m-auto pt-20">
         <form
-            action="{{ route('comments.store') }}"
+            action="{{ route('comments.store') }}"1
             method="POST"
             enctype="multipart/form-data">
             @csrf
