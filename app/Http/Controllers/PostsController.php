@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use Cviebrock\EloquentSluggable\Services\SlugService;
@@ -9,9 +10,15 @@ use Cviebrock\EloquentSluggable\Services\SlugService;
 class PostsController extends Controller
 {
 
+
     public function __construct()
     {
         $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class)->orderBy('created_at', 'asc');
     }
     /**
      * Display a listing of the resource.
@@ -22,12 +29,12 @@ class PostsController extends Controller
     {
         $posts = Post::with(['comments' => function ($query) {
             $query->orderBy('created_at', 'ASC');
-        }])
-            ->orderBy('created_at', 'ASC')
-            ->get();
+        }])->orderBy('created_at', 'ASC')->get();
+
 
         return view('blog.index', compact('posts'));
     }
+
     /**
      * Show the form for creating a new resource.
      *
