@@ -40,9 +40,19 @@
     flex-direction: column;
 }
 .commentButton {
-    max-width: 150px;
+   width:106px;
     max-height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.commentsSection {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.commentRight{
+    width:70%;
+}
+.commentLeft{
+    width:30%;
 }

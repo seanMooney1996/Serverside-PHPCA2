@@ -25,6 +25,7 @@
 
             <input type="hidden" name="postId" value="{{ $postId }}">
             <input type="hidden" name="userId" value="{{ $userId }}">
+            <input type="hidden" name="slug" value="{{ $slug }}">
 
             <button
                 type="submit"

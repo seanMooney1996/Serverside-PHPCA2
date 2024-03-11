@@ -48,14 +48,14 @@
         @for ($i = 0; $i < 2; $i++)
             <div class="comment">
         <p><strong>{{ $post->comments[$i]->user->name }}</strong>: {{ $post->comments[$i]->content }}<br/>
-            Posted at: {{ date('jS M Y', strtotime($comment->created_at)) }}
+            Posted at: {{ date('jS M Y', strtotime( $post->comments[$i]->created_at)) }}
         </p>
             </div>
         @endfor
         @elseif(sizeof($post->comments) == 1)
             <div class="comment">
                 <p><strong>{{ $post->comments[0]->user->name }}</strong>: {{ $post->comments[0]->content }}<br/>
-                    Posted at: {{ date('jS M Y', strtotime($comment->created_at)) }}
+                    Posted at: {{ date('jS M Y', strtotime( $post->comments[$i]->created_at)) }}
                 </p>
             </div>
         @endif
@@ -67,7 +67,7 @@
 
             @if (isset(Auth::user()->id) )
             <a
-                href="{{ route('comments.create', ['postId' => $post->id, 'userId' => Auth::id()]) }}"
+                href="{{ route('comments.create', ['postId' => $post->id, 'userId' => Auth::id(),'slug' => $post->slug]), }}"
                 class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
                 Add a comment
             </a>
@@ -98,7 +98,6 @@
                     </a>
                 </span>
     @endif
-</div>
 </div>
 @endforeach
 

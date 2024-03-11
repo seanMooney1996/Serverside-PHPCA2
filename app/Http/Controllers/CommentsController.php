@@ -21,8 +21,8 @@ class CommentsController extends Controller
             ->with('comment', Comment::where('post_id', $post_id)->get());
     }
 
-    public function create($postId, $userId){
-        return view('comments.create', ['postId' => $postId, 'userId' => $userId]);
+    public function create($postId, $userId ,$slug){
+        return view('comments.create', ['postId' => $postId, 'userId' => $userId , 'slug' => $slug]);
     }
 
     public function store(Request $request)
@@ -39,8 +39,9 @@ class CommentsController extends Controller
         $comment->user_id = $request->input('userId');
         $comment->save();
 
+        $slug = $request->input('slug');
         // Redirect the user with a success message
-        return redirect('/blog')->with('message', 'Your comment has been added!');
+        return redirect("/blog/{$slug}")->with('message', 'Your comment has been added!');
     }
 
 //    public function store(Request $request)
