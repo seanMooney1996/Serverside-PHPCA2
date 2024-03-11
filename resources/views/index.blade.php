@@ -21,7 +21,7 @@
         <img src="https://cdn.pixabay.com/photo/2014/05/03/01/03/laptop-336704_960_720.jpg" width="700" alt="">
     </div>
 
-    <div class="m-auto sm:m-auto text-left w-4/5 block">
+    <div class="m-auto sm:m-auto text-left w-4/5 block textBoxColor1">
         <h2 class="text-3xl font-extrabold text-gray-600">
             Struggling to be a better web developer?
         </h2>

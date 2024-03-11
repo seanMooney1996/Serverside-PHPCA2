@@ -7,19 +7,21 @@
             <a class="no-underline hover:underline" href="/blog">Reviews</a>
         </div>
     </div>
-    @guest
-        <div class="navButton">
-            <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
-        </div>
+        <img class="imageNav" src="images/Elden-Ring-Logo-PNG-Photo.png" alt="">
 
-        @if (Route::has('register'))
+
+        <div class="userSection">
+            @guest
+            <div class="navButton">
+                <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
+            </div>
+
+            @if (Route::has('register'))
             <div class="navButton">
                 <a class="no-underline hover:underline" href="{{ route('register') }}">{{ __('Register') }}</a>
             </div>
-        @endif
-    @else
-
-        <div class="userSection">
+            @endif
+            @else
             <span>{{ Auth::user()->name }}</span>
 
             <a href="{{ route('logout') }}"

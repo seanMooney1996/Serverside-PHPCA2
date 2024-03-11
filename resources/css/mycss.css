@@ -4,9 +4,14 @@
 
 @import "tailwindcss/utilities";
 
+@import url('https://fonts.cdnfonts.com/css/garamond');
 
 .footerClass {
     background-color:blue;
+}
+body {
+    background: url("../../public/images/EldenBackground2.jpg") no-repeat fixed;
+    font-family: 'Garamond', sans-serif;
 }
 
 .navClass {
@@ -20,17 +25,35 @@
     padding: 30px;
     position: fixed;
     color: #f9b306;
+    font-size:29px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    font-family: 'Garamond', sans-serif;
+}
+.textBoxColor1{
+    background-color: #90683b;
+    padding:30px;
+    opacity: 0.8;
+}
+.textBoxColor1 h2{
+    color: #f9b306;
+}
+.textBoxColor1 p{
+    color: rgba(255, 255, 255, var(--text-opacity));
+}
+.imageNav{
+    height:140%;
 }
 .leftNav {
     display:flex;
 }
 .navButton {
-    margin-left:4px;
-    margin-right:4px;
+    margin-left:8px;
+    margin-right:8px;
 }
 
 .userSection{
     margin-left:10px;
+    display:flex;
 }
 
 .postContent {

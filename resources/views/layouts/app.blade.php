@@ -11,11 +11,12 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    
+
     <!-- Styles -->
     <link href="{{ mix('css/mycss.css') }}" rel="stylesheet">
+
 </head>
-<body class="bg-gray-100 h-screen antialiased leading-none font-sans">
+<body background="bg.gif" bgcolor="#000000" bgproperties="fixed">
     @include('layouts.nav')
     <div id="app">
         <header class="bg-grey-800 py-6">
