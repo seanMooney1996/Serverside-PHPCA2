@@ -48,14 +48,14 @@
         @for ($i = 0; $i < 2; $i++)
             <div class="comment">
         <p><strong>{{ $post->comments[$i]->user->name }}</strong>: {{ $post->comments[$i]->content }}<br/>
-            {{ $post->comments[$i]->created_at }}
+            Posted at: {{ date('jS M Y', strtotime($comment->created_at)) }}
         </p>
             </div>
         @endfor
         @elseif(sizeof($post->comments) == 1)
             <div class="comment">
                 <p><strong>{{ $post->comments[0]->user->name }}</strong>: {{ $post->comments[0]->content }}<br/>
-                    {{ $post->comments[0]->created_at }}
+                    Posted at: {{ date('jS M Y', strtotime($comment->created_at)) }}
                 </p>
             </div>
         @endif
