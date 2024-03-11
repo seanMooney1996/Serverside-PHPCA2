@@ -44,12 +44,21 @@
         <p class="text-xl text-gray-700 pt-8 pb-10 leading-8 font-light">
             {{ $post->description }}
         </p>
+        @if (sizeof($post->comments) >= 2)
         @for ($i = 0; $i < 2; $i++)
+            <div class="comment">
         <p><strong>{{ $post->comments[$i]->user->name }}</strong>: {{ $post->comments[$i]->content }}<br/>
             {{ $post->comments[$i]->created_at }}
         </p>
-
+            </div>
         @endfor
+        @elseif(sizeof($post->comments) == 1)
+            <div class="comment">
+                <p><strong>{{ $post->comments[0]->user->name }}</strong>: {{ $post->comments[0]->content }}<br/>
+                    {{ $post->comments[0]->created_at }}
+                </p>
+            </div>
+        @endif
         <div class="buttonsBottom">
             <a href="/blog/{{ $post->slug }}"
                class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
