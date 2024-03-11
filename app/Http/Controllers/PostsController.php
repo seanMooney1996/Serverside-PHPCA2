@@ -20,16 +20,14 @@ class PostsController extends Controller
      */
     public function index()
     {
-
         $posts = Post::with(['comments' => function ($query) {
-            $query->orderBy('created_at', 'DESC');
+            $query->orderBy('created_at', 'ASC');
         }])
-            ->orderBy('created_at', 'ASC')->get();
-
+            ->orderBy('created_at', 'ASC')
+            ->get();
 
         return view('blog.index', compact('posts'));
     }
-
     /**
      * Show the form for creating a new resource.
      *
