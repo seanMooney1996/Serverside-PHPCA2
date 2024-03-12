@@ -28,6 +28,10 @@ body {
     font-size:29px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
     font-family: 'Garamond', sans-serif;
+    z-index:1000;
+}
+.backgroundBlack{
+    background-color: #1e1d1f;
 }
 .textBoxColor1{
     background-color: #90683b;
