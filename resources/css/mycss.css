@@ -12,6 +12,8 @@
 body {
     background: url("../../public/images/EldenBackground2.jpg") no-repeat fixed;
     font-family: 'Garamond', sans-serif;
+    width:100vw;
+    height:100vh;
 }
 
 .navClass {
@@ -33,10 +35,29 @@ body {
 .backgroundBlack{
     background-color: #1e1d1f;
 }
+.displayFlexIndex {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.imageHoldIndexPage {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    width: 55%;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
 .textBoxColor1{
     background-color: #90683b;
     padding:30px;
     opacity: 0.8;
+    width:35%;
+}
+.holdMiddleIndex {
+    width:95%;
+    display:flex;
 }
 .textBoxColor1 h2{
     color: #f9b306;

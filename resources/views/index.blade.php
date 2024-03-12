@@ -16,7 +16,8 @@
     </div>
 </div>
 
-<div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
+<div class="py-0 displayFlexIndex">
+    <div class="holdMiddleIndex">
     <div class="imageHoldIndexPage">
         <img src="images/EldenCharPNG.png" width="700" alt="">
     </div>
@@ -40,6 +41,7 @@
             class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
             Find Out More
         </a>
+    </div>
     </div>
 </div>
 
