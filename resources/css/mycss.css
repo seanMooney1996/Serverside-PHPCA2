@@ -122,7 +122,11 @@ body {
     color: rgba(255, 255, 255, var(--text-opacity));
 }
 .imageNav{
-    height:140%;
+ height:80%;
+    top: 50%;
+    left: 50%;
+    position:absolute;
+    transform: translate(-50%, -50%);
 }
 .leftNav {
     display:flex;
