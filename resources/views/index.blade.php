@@ -19,10 +19,10 @@
 <div class="py-0 displayFlexIndex">
     <div class="holdMiddleIndex1">
     <div class="imageHoldIndexPage">
-        <img src="images/EldenCharPNG.png" width="700" alt="">
+        <img class="imageEldenChar" src="images/EldenCharPNG.png" width="700" alt="">
     </div>
 
-    <div class="m-auto text-left w-4/5 block textBoxColor1">
+    <div class="text-left w-4/5 block textBoxColor1">
         <h2 class="text-3xl font-extrabold text-gray-600">
             Struggling to be a better web developer?
         </h2>
@@ -45,23 +45,10 @@
     </div>
 </div>
 
-<div class="text-center p-15 bg-black text-white backgroundBlack">
-    <h2 class="text-2xl pb-5 text-l">
-        I'm an expert in...
+<div class="text-center p-8 bg-black text-white backgroundBlack">
+    <h2 class="text-3xl pb-5 text-l">
+       A tarnished's most recent Review
     </h2>
-
-    <span class="font-extrabold block text-4xl py-1">
-            Ux Design
-        </span>
-    <span class="font-extrabold block text-4xl py-1">
-            Project Management
-        </span>
-    <span class="font-extrabold block text-4xl py-1">
-            Digital Strategy
-        </span>
-    <span class="font-extrabold block text-4xl py-1">
-            Backend Development
-        </span>
 </div>
 
 <div class="text-center py-15 post">
