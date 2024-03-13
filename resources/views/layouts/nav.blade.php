@@ -22,7 +22,9 @@
             </div>
             @endif
             @else
-            <span>{{ Auth::user()->name }}</span>
+                <div class="navButton">
+            <span class="mr-[3px]">{{ Auth::user()->name }}</span>
+                </div>
 
             <a href="{{ route('logout') }}"
                class="no-underline hover:underline"
