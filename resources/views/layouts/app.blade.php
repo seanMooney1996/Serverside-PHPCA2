@@ -16,7 +16,7 @@
     <link href="{{ mix('css/mycss.css') }}" rel="stylesheet">
 
 </head>
-<body background="bg.gif" bgcolor="#000000" bgproperties="fixed">
+<body bgproperties="fixed">
     @include('layouts.nav')
     <div id="app">
         <header class="bg-grey-800 py-6">

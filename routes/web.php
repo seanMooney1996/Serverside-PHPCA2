@@ -19,15 +19,17 @@ use App\Http\Controllers\CommentsController;
 Route::get('/', [PagesController::class, 'index']);
 
 Route::resource('/blog', PostsController::class);
-
 Auth::routes();
+
+
 Route::resource('/comments', CommentsController::class);
 Auth::routes();
+
+
 Route::get('/comments/{postId}/{userId}/{slug}/create',  [CommentsController::class, 'create'])->name('comments.create');
 Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');

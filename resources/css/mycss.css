@@ -7,7 +7,7 @@
 @import url('https://fonts.cdnfonts.com/css/garamond');
 
 .footerClass {
-    background-color:blue;
+    background-color: #1e1d1f;
 }
 body {
     background: url("../../public/images/EldenBackground2.jpg") no-repeat fixed;
@@ -39,32 +39,81 @@ body {
 .backgroundBlack{
     background-color: #1e1d1f;
 }
+.commentsHold {
+    display:flex;
+    width:100%;
+}
 .goldButton {
     background-color: #dc8008;
+    display: flex;
+    margin: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 1;
+    z-index: 500;
+    min-height: 50px;
+    min-width: 160px;
+    align-items: center;
+    justify-content: center;
+}
+.goldButtonBig {
+    background-color: #dc8008;
+    display: flex;
+    margin: 4px;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 1;
+    z-index: 500;
+    min-height: 50px;
+    max-height:50px;
+    min-width: 230px;
+    max-width:230px;
+    align-items: center;
+    justify-content: center;
 }
 .displayFlexIndex {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
+    margin-top:8px;
+    margin-bottom:8px;
+    /*background-color: rgba(252, 220, 180, 0.8);*/
+    /*border-radius: 5px;*/
+
 }
 .imageHoldIndexPage {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
+    align-items: center;
     width: 55%;
-    justify-content: flex-end;
+    justify-content: center;
     flex-direction: row-reverse;
 }
-.textBoxColor1{
+.textBoxColor1 {
     background-color: #90683b;
-    padding:30px;
-    opacity: 0.8;
-    width:35%;
+    padding: 30px;
+    opacity: 0.9;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
 }
 .holdMiddleIndex {
     width:95%;
     display:flex;
+    height:100%;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.holdMiddleIndex1 {
+    width:95%;
+    display:flex;
+    height:100%;
+}
+.imagePost {
+    height:90%;
 }
 .textBoxColor1 h2{
     color: #f9b306;
@@ -100,6 +149,7 @@ body {
 .comment{
     padding-top:5px;
     padding-bottom:5px;
+    margin:3px;
 }
 .postHolder {
     display: flex;
