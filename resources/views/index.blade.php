@@ -38,7 +38,7 @@
 
         <a
             href="/blog"
-            class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl">
+            class="uppercase bg-blue-500 text-gray-100 text-s font-extrabold py-3 px-8 rounded-3xl goldButton">
             Find Out More
         </a>
     </div>
@@ -69,9 +69,9 @@
             Blog
         </span>
 
-    <h2 class="text-4xl font-bold py-10">
+    <h3 class="text-4xl font-bold py-10">
         Recent Posts
-    </h2>
+    </h3>
 
     <p class="m-auto w-4/5 text-gray-500">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque exercitationem saepe enim veritatis, eos
