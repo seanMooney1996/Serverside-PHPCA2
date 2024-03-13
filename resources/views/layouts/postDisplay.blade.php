@@ -1,4 +1,4 @@
-
+<div class="textBoxColor1">
     <div>
         <img src="{{ asset('images/' . $post->image_path) }}" alt="">
     </div>
@@ -33,17 +33,18 @@
         @endif
         <div class="buttonsBottom">
             <a href="/blog/{{ $post->slug }}"
-               class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
+               class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl goldButton">
                 Keep Reading
             </a>
 
             @if (isset(Auth::user()->id) )
                 <a
                     href="{{ route('comments.create', ['postId' => $post->id, 'userId' => Auth::id(),'slug' => $post->slug]), }}"
-                    class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
+                    class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl goldButton">
                     Add a comment
                 </a>
             @endif
 
         </div>
     </div>
+</div>
