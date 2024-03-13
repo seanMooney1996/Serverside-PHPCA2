@@ -64,7 +64,7 @@
         </span>
 </div>
 
-<div class="text-center py-15">
+<div class="text-center py-15 post">
     @php
         $post = $posts->first();
     @endphp

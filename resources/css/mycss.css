@@ -16,6 +16,9 @@ body {
     height:100vh;
     color:white;
 }
+.postContainer{
+    display:flex;
+}
 
 .navClass {
     background-color:#1e1d1f;
