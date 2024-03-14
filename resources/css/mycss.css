@@ -195,12 +195,28 @@ input {
     padding-top: 5px;
     padding-bottom: 5px;
     margin: 6px;
-    max-width: 200px;
-    min-width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    color:black;
+}
+.commentInBubble {
+    display: flex;
+    position: relative;
+    margin:20px;
+    color: black;
+    max-height:150px;
+    width: 320px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #e9dac9;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.commentInBubble p {
+padding:18px;
 }
 
 p {
@@ -234,6 +250,7 @@ p {
     justify-content: center;
     align-items: center;
     border-radius:10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .comment p {
     text-align: left;

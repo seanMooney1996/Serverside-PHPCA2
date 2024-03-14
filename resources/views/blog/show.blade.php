@@ -43,11 +43,11 @@
             </div>
             <div class="commentLeft">
                 @foreach ( $post->comments as $comment)
-                    <div class="comment">
+                        <div class="commentInBubble">
                         <p><strong>{{ $comment->user->name }}</strong>: {{ $comment->content }}<br/>
-                            Posted at: {{ date('jS M Y', strtotime($comment->created_at)) }}
-                        </p>
-                    </div>
+                                Posted at: {{ date('jS M Y', strtotime($comment->created_at)) }}
+                            </p>
+                        </div>
                 @endforeach
             </div>
         </div>
