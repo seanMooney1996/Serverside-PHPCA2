@@ -200,7 +200,48 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start;
 }
+
+p {
+    text-align: left;
+}
+.displayFlexImageHoldShow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+.imagewidth {
+    width:100%;
+}
+.innerContent{
+    width:90%;
+    background-color:#e9dac9;
+    color:black;
+    align-items: center;
+    justify-content: center;
+    padding:30px;
+    margin-top:30px;
+    margin-bottom:30px;
+    border-radius:10px;
+}
+.showReviewTextContent {
+    display: flex;
+    background-color: #90683b;
+    margin-top: 15px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius:10px;
+}
+.comment p {
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-height:200px;
+}
+
 .postHolder {
     display: flex;
     justify-content: flex-start;
