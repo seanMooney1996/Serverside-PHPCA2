@@ -18,7 +18,7 @@ class CommentsController extends Controller
     public function show($post_id)
     {
         return view('blog.show')
-            ->with('comment', Comment::where('post_id', $post_id)->orderBy('created_at', 'ASC')->get());
+            ->with('comment', Comment::where('post_id', $post_id)->orderBy('created_at', 'DESC')->get());
     }
 
     public function create($postId, $userId ,$slug){

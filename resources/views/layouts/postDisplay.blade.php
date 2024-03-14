@@ -18,40 +18,48 @@
                 </p>
                 <h4>Recent Comments</h4>
                 <div class="commentsHold">
-                @if (sizeof($post->comments) >= 2)
-                    @for ($i = 0; $i < 2; $i++)
+                    @if (sizeof($post->comments) >= 2)
+                        @for ($i = 0; $i < 2; $i++)
+                            <div class="comment">
+
+                                <p><strong>{{ $post->comments[$i]->user->name }}</strong>: </p>
+                                <p> {{ $post->comments[$i]->content }}</p>
+                                <br/>
+                                <p>
+                                    Posted at: {{ date('jS M Y', strtotime( $post->comments[$i]->created_at)) }}
+                                </p>
+                            </div>
+                        @endfor
+                    @elseif(sizeof($post->comments) == 1)
                         <div class="comment">
+                            <p><strong>{{ $post->comments[0]->user->name }}</strong>:
+                            </p>
                             <p>
-                                <strong>{{ $post->comments[$i]->user->name }}</strong>: {{ $post->comments[$i]->content }}
                                 <br/>
-                                Posted at: {{ date('jS M Y', strtotime( $post->comments[$i]->created_at)) }}
+                                {{ $post->comments[0]->content }}
+                                <br/>
+                            </p>
+                            <p>
+                                Posted at: {{ date('jS M Y', strtotime( $post->comments[0]->created_at)) }}
                             </p>
                         </div>
-                    @endfor
-                        @elseif(sizeof($post->comments) == 1)
-                        <div class="comment">
-                            <p><strong>{{ $post->comments[0]->user->name }}</strong>: {{ $post->comments[0]->content }}
-                                <br/>
-                                Posted at: {{ date('jS M Y', strtotime( $post->comments[$i]->created_at)) }}
-                            </p>
-                        </div>
-                        @endif
-                    </div>
-                    <div class="buttonsBottom">
-                        <a href="/blog/{{ $post->slug }}"
-                           class="uppercase rounded-3xl goldButton">
-                            Keep Reading
+                    @endif
+                </div>
+                <div class="buttonsBottom">
+                    <a href="/blog/{{ $post->slug }}"
+                       class="uppercase rounded-3xl goldButton">
+                        Keep Reading
+                    </a>
+
+                    @if (isset(Auth::user()->id) )
+                        <a
+                            href="{{ route('comments.create', ['postId' => $post->id, 'userId' => Auth::id(),'slug' => $post->slug]), }}"
+                            class="uppercase rounded-3xl goldButton">
+                            Add a comment
                         </a>
+                    @endif
 
-                        @if (isset(Auth::user()->id) )
-                            <a
-                                href="{{ route('comments.create', ['postId' => $post->id, 'userId' => Auth::id(),'slug' => $post->slug]), }}"
-                                class="uppercase rounded-3xl goldButton">
-                                Add a comment
-                            </a>
-                        @endif
-
-                    </div>
+                </div>
             </div>
         </div>
     </div>

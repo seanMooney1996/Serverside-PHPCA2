@@ -10,7 +10,7 @@ class PagesController extends Controller
     public function index()
     {
 
-        $posts = Post::orderBy('created_at', 'ASC')->paginate(1);
+        $posts = Post::orderBy('created_at', 'DESC')->paginate(1);
 
         return view('index',compact('posts'));
     }
