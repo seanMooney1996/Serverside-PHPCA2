@@ -64,7 +64,6 @@ body {
 .goldButtonBig {
     background-color: #dc8008;
     display: flex;
-    margin: 4px;
     font-size: 24px;
     font-weight: bold;
     opacity: 1;
@@ -75,6 +74,7 @@ body {
     max-width:230px;
     align-items: center;
     justify-content: center;
+    margin: 4px 4% 4px 4px;
 }
 .displayFlexIndex {
     display: flex;
@@ -212,6 +212,15 @@ input {
     justify-content: space-between;
     align-items: flex-start;
     color:black;
+}
+.commentSec {
+    width:30%;
+    opacity: 0.8;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.dispFlexRev {
+    display: flex;
+    flex-direction: row-reverse;
 }
 .commentInBubble {
     display: flex;

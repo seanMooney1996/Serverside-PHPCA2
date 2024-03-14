@@ -18,7 +18,7 @@
     @endif
 
     @if (Auth::check())
-        <div class=" w-4/5 m-auto p-2">
+        <div class=" w-4/5 m-auto p-2 dispFlexRev">
             <a
                 href="/blog/create"
                 class="bg-blue-500 uppercase bg-transparent text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl goldButtonBig">

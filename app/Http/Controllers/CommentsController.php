@@ -22,7 +22,8 @@ class CommentsController extends Controller
     }
 
     public function create($postId, $userId ,$slug){
-        return view('comments.create', ['postId' => $postId, 'userId' => $userId , 'slug' => $slug]);
+        $post = Post::where('id', $postId)->first();
+        return view('comments.create', ['post'=> $post ,'postId' => $postId, 'userId' => $userId , 'slug' => $slug]);
     }
 
     public function store(Request $request)
