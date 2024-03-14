@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="w-4/5 m-auto text-center">
-        <div class="py-15 border-b border-gray-200">
+        <div class="py-9 border-b border-gray-200 my-5">
             <h1 class="text-6xl">
                 REVIEWS
             </h1>

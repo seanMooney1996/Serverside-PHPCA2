@@ -47,15 +47,23 @@
 
 <div class="text-center p-8 bg-black text-white backgroundBlack">
     <h2 class="text-3xl pb-5 text-l">
+        Welcome to our Elden Ring review hub, where passionate gamers converge to share their experiences and insights on FromSoftware's latest masterpiece.
+    </h2>
+    <h2 class="text-3xl pb-5 text-l">
        A tarnished's most recent Review
     </h2>
+
 </div>
 
 <div class="text-center py-15 post">
     @php
         $post = $posts->first();
     @endphp
-@include('layouts.postDisplay')
+    @if (sizeof($posts)!= 0)
+        @include('layouts.postDisplay')
+    @else
+        <h2>No reviews at this moment. Leave a review!</h2>
+    @endif
 </div>
 
 <div class="sm:grid grid-cols-2 w-4/5 m-auto">

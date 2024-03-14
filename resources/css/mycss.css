@@ -7,6 +7,8 @@
 @import url('https://fonts.cdnfonts.com/css/garamond');
 
 .footerClass {
+    bottom: 0;
+    width: 100%;
     background-color: #1e1d1f;
 }
 body {
@@ -14,8 +16,10 @@ body {
     font-family: 'Garamond', sans-serif;
     width:100vw;
     height:100vh;
+    min-height: 100vh;
     color:white;
 }
+
 .postContainer{
     display:flex;
 }
@@ -120,6 +124,40 @@ body {
 }
 .textBoxColor1 p{
     color: rgba(255, 255, 255, var(--text-opacity));
+}
+.loginRegClass {
+    background-color: #1e1d1f;
+    color:white;
+    border-radius:10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.goldColor {
+background-color: #dc8008;
+}
+input {
+    color:black;
+}
+.createPostClass {
+    background-color: #90683b;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid #1e1d1f;
+}
+.textboxColorGrey {
+    background-color:#dc8008;
+    margin-top:4px;
+    margin-bottom:15px;
+    padding: 6px;
+    color:black;
+    border-radius:10px;
+}
+.descBox{
+    height:250px;
+}
+.textboxColorGrey::placeholder {
+    color: rgba(0, 0, 0, 0.42);
 }
 .imageNav{
  height:80%;
