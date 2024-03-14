@@ -20,7 +20,7 @@
                 <div class="commentsHold">
                     @if (sizeof($post->comments) >= 2)
                         @for ($i = 0; $i < 2; $i++)
-                            <div class="comment">
+                            <div class="commentSmall">
 
                                 <p><strong>{{ $post->comments[$i]->user->name }}</strong>: </p>
                                 <p> {{ $post->comments[$i]->content }}</p>

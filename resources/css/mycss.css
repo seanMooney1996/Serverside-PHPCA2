@@ -44,8 +44,9 @@ body {
     background-color: #1e1d1f;
 }
 .commentsHold {
-    display:flex;
-    width:100%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 .goldButton {
     background-color: #dc8008;
@@ -194,6 +195,17 @@ input {
 .comment {
     padding-top: 5px;
     padding-bottom: 5px;
+    margin: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color:black;
+}
+.commentSmall {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-width:40%;
     margin: 6px;
     display: flex;
     flex-direction: column;
