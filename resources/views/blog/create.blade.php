@@ -48,7 +48,7 @@
                     type="file"
                     name="image"
                     class="hidden"
-                    accept="image/jpeg">
+                    accept="image/jpg">
             </label>
         </div>
 
