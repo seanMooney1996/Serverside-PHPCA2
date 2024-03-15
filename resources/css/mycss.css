@@ -104,6 +104,8 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
+    border-radius:30px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 .holdMiddleIndex {
     width:95%;
@@ -119,6 +121,7 @@ body {
 }
 .imagePost {
     max-width:90%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 .textBoxColor1 h2{
     color: #f9b306;
@@ -166,6 +169,7 @@ input {
     left: 50%;
     position:absolute;
     transform: translate(-50%, -50%);
+
 }
 .imageEldenChar {
     bottom:0;

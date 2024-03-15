@@ -24,16 +24,15 @@
 
     <div class="text-left w-4/5 block textBoxColor1">
         <h2 class="text-3xl font-extrabold text-gray-600">
-            Struggling to be a better web developer?
+            Do you feel passionate about Elden Ring?
         </h2>
 
         <p class="py-8 text-gray-500 text-s">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus.
+            You came to the right place, tarnished.
         </p>
 
-        <p class="font-extrabold text-gray-600 text-s pb-9">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente magnam vero nostrum! Perferendis eos
-            molestias porro vero. Vel alias.
+        <p class=" text-gray-600 text-s pb-9">
+            Embrace yourself in the arms of a deathbed maiden, right here. Read some delightful reviews from some fellow maidenless husks. Or tempt yourself in grace and write a review yourself.
         </p>
 
         <a
@@ -50,7 +49,7 @@
         Welcome to our Elden Ring review hub, where passionate gamers converge to share their experiences and insights on FromSoftware's latest masterpiece.
     </h2>
     <h2 class="text-3xl pb-5 text-l">
-       A tarnished's most recent Review
+       Below, a tarnished's most recent review
     </h2>
 
 </div>
